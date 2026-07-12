@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/profile-banner.gif" alt="Animated digital workshop of Rangga Egha Permana building with technology" width="100%" />
+  <img src="https://raw.githubusercontent.com/RanggaEghaPermana/RanggaEghaPermana/banner-state/assets/profile-banner-current.gif" alt="Time-aware animated digital workshop of Rangga Egha Permana building with technology" width="100%" />
 </div>
 
 <br />

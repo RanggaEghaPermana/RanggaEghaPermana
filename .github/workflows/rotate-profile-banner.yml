@@ -1,0 +1,94 @@
+name: Rotate profile banner tone
+
+on:
+  schedule:
+    - cron: "7 5 * * *"
+      timezone: "Asia/Jakarta"
+    - cron: "7 11 * * *"
+      timezone: "Asia/Jakarta"
+    - cron: "7 17 * * *"
+      timezone: "Asia/Jakarta"
+    - cron: "7 20 * * *"
+      timezone: "Asia/Jakarta"
+  workflow_dispatch:
+    inputs:
+      tone:
+        description: Banner tone to activate
+        required: true
+        default: auto
+        type: choice
+        options:
+          - auto
+          - morning
+          - day
+          - sunset
+          - night
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-banner-tone
+  cancel-in-progress: true
+
+jobs:
+  rotate-banner:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout profile source
+        uses: actions/checkout@v4
+        with:
+          path: source
+
+      - name: Checkout banner state
+        uses: actions/checkout@v4
+        with:
+          ref: banner-state
+          path: state
+          fetch-depth: 1
+
+      - name: Select tone for Jakarta time
+        id: tone
+        shell: bash
+        env:
+          REQUESTED_TONE: ${{ inputs.tone || 'auto' }}
+        run: |
+          tone="$REQUESTED_TONE"
+
+          if [[ "$tone" == "auto" ]]; then
+            hour="$(TZ=Asia/Jakarta date +%H)"
+
+            if (( 10#$hour >= 5 && 10#$hour < 11 )); then
+              tone="morning"
+            elif (( 10#$hour >= 11 && 10#$hour < 17 )); then
+              tone="day"
+            elif (( 10#$hour >= 17 && 10#$hour < 20 )); then
+              tone="sunset"
+            else
+              tone="night"
+            fi
+          fi
+
+          echo "tone=$tone" >> "$GITHUB_OUTPUT"
+          echo "Selected banner tone: $tone"
+
+      - name: Publish selected banner tone
+        shell: bash
+        env:
+          TONE: ${{ steps.tone.outputs.tone }}
+        run: |
+          source_file="source/assets/banner-tones/$TONE.gif"
+          state_file="state/assets/profile-banner-current.gif"
+
+          if cmp -s "$source_file" "$state_file"; then
+            echo "Banner tone is already $TONE; no update needed."
+            exit 0
+          fi
+
+          cp "$source_file" "$state_file"
+          cd state
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/profile-banner-current.gif
+          git commit -m "chore: switch banner tone to $TONE"
+          git push origin HEAD:banner-state
