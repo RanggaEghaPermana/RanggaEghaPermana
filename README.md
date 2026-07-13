@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/profile-banner-v2.png" alt="Rangga Egha Permana digital workshop banner" width="100%" />
+  <img src="./assets/profile-banner.gif" alt="Animated digital workshop of Rangga Egha Permana building with technology" width="100%" />
 </div>
 
 <br />
