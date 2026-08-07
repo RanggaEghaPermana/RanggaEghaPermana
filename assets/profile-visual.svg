@@ -1,0 +1,85 @@
+<svg width="1600" height="460" viewBox="0 0 1600 460" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Rangga's digital workshop</title>
+  <desc id="desc">An abstract dark workspace with a grid, connected nodes, and the words Build, Explore, and Share.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1117" />
+      <stop offset="0.56" stop-color="#111827" />
+      <stop offset="1" stop-color="#0D1117" />
+    </linearGradient>
+    <linearGradient id="edge" x1="100" y1="40" x2="1450" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE" />
+      <stop offset="0.52" stop-color="#8B5CF6" />
+      <stop offset="1" stop-color="#22D3EE" />
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#22D3EE" stop-opacity="0.4" />
+      <stop offset="1" stop-color="#8B5CF6" stop-opacity="0" />
+    </linearGradient>
+    <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+      <path d="M42 0H0V42" stroke="#94A3B8" stroke-opacity="0.1" />
+    </pattern>
+    <filter id="blur" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="28" />
+    </filter>
+    <filter id="soft-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="7" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="460" rx="28" fill="url(#bg)" />
+  <rect width="1600" height="460" rx="28" fill="url(#grid)" />
+  <circle cx="1390" cy="36" r="180" fill="#22D3EE" fill-opacity="0.11" filter="url(#blur)" />
+  <circle cx="1100" cy="440" r="180" fill="#8B5CF6" fill-opacity="0.12" filter="url(#blur)" />
+
+  <path d="M770 58C920 92 850 190 1000 222C1150 254 1080 350 1240 382" stroke="url(#edge)" stroke-opacity="0.55" stroke-width="2" />
+  <path d="M700 420C820 350 840 290 950 292C1060 294 1120 190 1290 164" stroke="#22D3EE" stroke-opacity="0.18" stroke-width="1.5" stroke-dasharray="7 10" />
+
+  <g opacity="0.8">
+    <circle cx="770" cy="58" r="4" fill="#22D3EE" />
+    <circle cx="1000" cy="222" r="5" fill="#8B5CF6" />
+    <circle cx="1240" cy="382" r="4" fill="#22D3EE" />
+    <circle cx="950" cy="292" r="4" fill="#8B5CF6" />
+    <circle cx="1290" cy="164" r="5" fill="#22D3EE" />
+  </g>
+
+  <g transform="translate(82 72)">
+    <rect width="196" height="34" rx="17" fill="#111827" stroke="#334155" />
+    <circle cx="22" cy="17" r="5" fill="#22D3EE" />
+    <text x="38" y="22" fill="#CBD5E1" font-family="Inter, Segoe UI, sans-serif" font-size="13" letter-spacing="2">DIGITAL WORKSHOP</text>
+  </g>
+
+  <text x="82" y="190" fill="#F8FAFC" font-family="Inter, Segoe UI, sans-serif" font-size="54" font-weight="700" letter-spacing="-1.5">Ideas into useful systems.</text>
+  <text x="86" y="238" fill="#94A3B8" font-family="Inter, Segoe UI, sans-serif" font-size="20">A curious builder's loop: make something, learn from it, make it better.</text>
+
+  <g transform="translate(84 310)">
+    <rect width="470" height="72" rx="16" fill="#0B1220" fill-opacity="0.9" stroke="#263449" />
+    <text x="26" y="31" fill="#22D3EE" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="2">BUILD</text>
+    <text x="132" y="31" fill="#8B5CF6" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="2">EXPLORE</text>
+    <text x="276" y="31" fill="#F8FAFC" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="2">SHARE</text>
+    <path d="M26 50H420" stroke="#334155" />
+    <circle cx="26" cy="50" r="4" fill="#22D3EE" filter="url(#soft-glow)" />
+    <circle cx="216" cy="50" r="4" fill="#8B5CF6" filter="url(#soft-glow)" />
+    <circle cx="420" cy="50" r="4" fill="#F8FAFC" filter="url(#soft-glow)" />
+    <path d="M30 50H210M220 50H414" stroke="url(#edge)" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <g transform="translate(1120 72)">
+    <rect width="352" height="256" rx="22" fill="#0B1220" fill-opacity="0.82" stroke="#334155" />
+    <rect x="24" y="24" width="304" height="28" rx="8" fill="#111827" />
+    <circle cx="42" cy="38" r="4" fill="#F87171" />
+    <circle cx="58" cy="38" r="4" fill="#FBBF24" />
+    <circle cx="74" cy="38" r="4" fill="#34D399" />
+    <text x="24" y="94" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="13">/workspace</text>
+    <text x="24" y="128" fill="#22D3EE" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="15">$ build --with-intent</text>
+    <text x="24" y="160" fill="#CBD5E1" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14">connecting ideas...</text>
+    <text x="24" y="192" fill="#8B5CF6" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="14">✓ useful outcome found</text>
+    <text x="24" y="224" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="13">ship · learn · repeat</text>
+  </g>
+
+  <text x="1450" y="416" text-anchor="end" fill="#64748B" font-family="ui-monospace, SFMono-Regular, Consolas, monospace" font-size="12" letter-spacing="2">RANGGA / 2026</text>
+</svg>
