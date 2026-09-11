@@ -68,7 +68,11 @@ My interests are intentionally broad and continue to evolve:
 </div>
 
 <div align="center">
-  <img src="https://ghchart.rshah.org/6c63ff/RanggaEghaPermana" alt="Rangga's contribution activity graph" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://ghchart.xqsit94.in/dark:6c63ff/RanggaEghaPermana" />
+    <source media="(prefers-color-scheme: light)" srcset="https://ghchart.xqsit94.in/light:6c63ff/RanggaEghaPermana" />
+    <img src="https://ghchart.xqsit94.in/dark:6c63ff/RanggaEghaPermana" alt="Rangga's contribution activity graph" />
+  </picture>
 </div>
 
 ## Open-Source Journey
