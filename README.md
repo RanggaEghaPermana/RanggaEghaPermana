@@ -68,7 +68,11 @@ My interests are intentionally broad and continue to evolve:
 </div>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=RanggaEghaPermana&bg_color=00000000&color=8b949e&line=6c63ff&point=22d3ee&area=true&hide_border=true" alt="Rangga's contribution activity graph" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/RanggaEghaPermana/RanggaEghaPermana/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/RanggaEghaPermana/RanggaEghaPermana/output/github-contribution-grid-snake.svg" />
+    <img alt="Rangga's contribution activity graph" src="https://raw.githubusercontent.com/RanggaEghaPermana/RanggaEghaPermana/output/github-contribution-grid-snake.svg" />
+  </picture>
 </div>
 
 ## Open-Source Journey
