@@ -69,9 +69,9 @@ My interests are intentionally broad and continue to evolve:
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ghchart.xqsit94.in/dark:6c63ff/RanggaEghaPermana" />
-    <source media="(prefers-color-scheme: light)" srcset="https://ghchart.xqsit94.in/light:6c63ff/RanggaEghaPermana" />
-    <img src="https://ghchart.xqsit94.in/dark:6c63ff/RanggaEghaPermana" alt="Rangga's contribution activity graph" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://gh-heat.anishroy.com/api/RanggaEghaPermana/svg?colors=0d1117,161b22,403b99,6c63ff,9891ff&amp;darkMode=true&amp;transparent=true" />
+    <source media="(prefers-color-scheme: light)" srcset="https://gh-heat.anishroy.com/api/RanggaEghaPermana/svg?theme=purple&amp;darkMode=false&amp;transparent=true" />
+    <img src="https://gh-heat.anishroy.com/api/RanggaEghaPermana/svg?colors=0d1117,161b22,403b99,6c63ff,9891ff&amp;darkMode=true&amp;transparent=true" alt="Rangga's contribution activity graph" />
   </picture>
 </div>
 
